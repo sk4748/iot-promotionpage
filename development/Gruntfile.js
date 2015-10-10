@@ -386,7 +386,7 @@ module.exports = function (grunt) {
     'copy:img',
     'imageoptim'
   ]);
-  grunt.registerTask('img_copy', [
+  grunt.registerTask('copy_img', [
     'clean:img',
     'copy:img'
   ]);

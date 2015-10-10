@@ -13,4 +13,3 @@ Gruntfile.js があるディレクトリで
 * grunt watch → less jsファイルの監視
 * grunt copy_img → develop/img/のファイルをproduction/img/にコピー
 * grunt build_img → 画像の圧縮
-
