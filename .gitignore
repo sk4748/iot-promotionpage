@@ -1,0 +1,12 @@
+#[ mac ]
+.DS_Store
+.Trashes
+
+#[ Windows ]
+Thumb.db
+ehthumbs.db
+Desktop.ini
+*.bak
+
+#[ node ]
+development/node_modules/*
