@@ -1,6 +1,6 @@
 # iot-promotionpage
 
-### Pullしたら初めにやること
+### クローンしたら初めにやること
 * package.json のあるディレクトリで npm install
 
 ### 仕様
