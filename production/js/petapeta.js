@@ -9,7 +9,7 @@ jQuery.getScript('path/to/file', function(data, textStatus) {
   //optional stuff to do after getScript
 });
 		
-var nav,homeSection,ruleSection,systemSection;
+var nav,homeSection,conceptSection,ruleSection,systemSection,futureSection,conceptSection;
 var LeftArray,widthArray;
 var sectionNumber;
 var navHeight = 60;
@@ -45,14 +45,14 @@ window.onload = function () {
 }
 
 function setgNavPosition(){
-	nav.style.top = ruleSection.offsetTop - navHeight + "px";
+	nav.style.top = conceptSection.offsetTop - navHeight + "px";
 }
 
 function setMoviePosition(){
 	var playerStyle = document.getElementById('player').style;
 	playerStyle.width = homeSection.width;
 
-	playerStyle.height = ruleSection.offsetTop - 60 + "px";
+	playerStyle.height = conceptSection.offsetTop - 60 + "px";
 	//会期中
 	// playerStyle.height = postSection.offsetTop -60 + "px";
 }
@@ -91,9 +91,12 @@ function setUnderlinePosition(){
 function getSectionElement(){
 	nav = document.getElementById('navWrapper');
   homeSection = document.getElementById('home');
+  conceptSection = document.getElementById('concept');
   ruleSection = document.getElementById('rule');
   systemSection = document.getElementById('system');
-}
+  futureSection = document.getElementById('future');
+
+  }
 
 $(function(){
   $('a[href^=#]').click(function() {
@@ -115,11 +118,12 @@ function scrollToSection(href){
 
 window.onscroll = function(){
 	var scrolled = $(this).scrollTop();
+	console.log(scrolled)
 	
-	if (scrolled >= ruleSection.offsetTop - navHeight) {
+	if (scrolled >= conceptSection.offsetTop - navHeight) {
 		nav.style.top = '0px';
 		nav.style.position = 'fixed';
-	}else if (scrolled < ruleSection.offsetTop) {
+	}else if (scrolled < conceptSection.offsetTop) {
 		nav.style.top = '';
 		nav.style.position = 'absolute';
 
@@ -130,10 +134,10 @@ window.onscroll = function(){
 
 function autoSetUnderline(scrollTop){
 	if (!navClicked) {
-		if (scrollTop < ruleSection.offsetTop - navHeight) {
+		if (scrollTop < conceptSection.offsetTop - navHeight) {
 			sectionNumber = 0;
 			slideUnderline(0);
-		}else if (scrollTop >= ruleSection.offsetTop - navHeight && scrollTop < systemSection.offsetTop - navHeight) {
+		}else if (scrollTop >= conceptSection.offsetTop - navHeight && scrollTop < systemSection.offsetTop - navHeight) {
 			sectionNumber = 1;
 			slideUnderline(1);
 		}else if (scrollTop >= systemSection.offsetTop - navHeight) {

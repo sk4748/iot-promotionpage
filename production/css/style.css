@@ -103,6 +103,11 @@ legend {
 #yui3-css-stamp.cssreset {
   display: none;
 }
+@font-face {
+  font-family: 'Visby Round CF ...';
+  src: url('フォント名.eot');
+  src: url('フォント名.eot?iefix') format('eot'), url('フォント名.woff') format('woff'), url('フォント名.ttf') format('truetype'), url('フォント名.svg#webfontjSpbZQRv') format('svg');
+}
 html,
 body {
   height: 100%;
@@ -113,7 +118,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  min-height: 680px;
 }
 #container #navWrapper {
   z-index: 999;
@@ -180,43 +184,17 @@ body {
 }
 #container #home {
   height: 100%;
-  background-color: #000;
 }
 #container #home #homeInner {
   z-index: 2;
   position: absolute;
-  background: url("../img/bg-home.jpg");
+  background: url("../img/bg−home.jpg");
   background-size: cover;
   background-position: 100%;
   height: 100%;
   width: 100%;
   transition: 0.3s ease-in-out;
   opacity: 1.0;
-}
-#container #home #homeInner .bg-gradation {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  background: #08c153;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #08c153 4%, #ff7031 99%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(4%, #08c153), color-stop(99%, #ff7031));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #08c153 4%, #ff7031 99%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #08c153 4%, #ff7031 99%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #08c153 4%, #ff7031 99%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #08c153 4%, #ff7031 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c153', endColorstr='#ff7031', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
 }
 #container #home #homeInner .home-box {
   position: absolute;
@@ -304,106 +282,188 @@ body {
   z-index: 1;
   opacity: 0.0;
 }
-#container #rule {
-  padding: 110px 0 40px;
-  line-height: 35px;
-  font-size: 24px;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Std", "Hiragino Kaku Gothic Std", "Hiragino Kaku Gothic ProN", sans-serif;
+#container #concept {
+  z-index: 2;
+  background: url("../img/concept.png");
+  background-size: cover;
+  background-position: 100%;
+  height: 80%;
+  width: 100%;
+  opacity: 1.0;
+  min-height: 720px;
 }
-#container #rule h2 {
+#container #concept .concept-inner {
+  padding: 9% 30px 9%;
+  margin: 0 auto;
+  max-width: 760px;
+  color: #fff;
+}
+#container #concept .concept-inner h2 {
   text-align: center;
   font-size: 40px;
   height: 50px;
-  font-weight: bold;
-  color: #08c153;
-  border-bottom: thin #08c153 solid;
   margin-bottom: 80px;
 }
-#container #rule h3 {
-  color: #fff;
-  background-color: #08c153;
-  font-size: 30px;
-  padding: 20px 0px;
-  margin: 80px 0px;
+#container #concept .concept-inner p {
   text-align: center;
+  font-size: 24px;
+}
+#container #rule {
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 #container #rule .rule-inner {
   margin: 0 auto;
   max-width: 980px;
-  padding: 0 50px;
 }
 #container #rule .rule-inner p {
   margin-top: 35px;
+  text-align: center;
+  font-size: 24px;
 }
-#container #rule .rule-inner .rule-left {
-  margin: 30px 0;
-  width: 55%;
-  display: inline-block;
-  vertical-align: top;
+#container #rule .rule-inner h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 80px;
+  margin-top: 50px;
 }
-#container #rule .rule-inner .rule-right {
-  margin: 30px 0;
-  width: 45%;
-  display: inline-block;
-  text-align: right;
+#container #rule .rule1 {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex: 1;
 }
-#container #rule .rule-inner .rule-right img {
-  margin-top: 30px;
+#container #rule .rule1 .betan {
+  background: #e73150;
+  height: 440px;
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 10px;
+}
+#container #rule .rule1 .betan p {
+  font-size: 16px;
+  text-align: left;
+  color: white;
+  margin: 20px;
+}
+#container #rule .rule1 .betan img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
 }
-#container #rule .rule-inner .touch {
+#container #rule .rule1 .petan {
+  background: #37af54;
+  height: 440px;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 10px;
+}
+#container #rule .rule1 .petan p {
+  font-size: 16px;
+  color: white;
+  text-align: left;
+  margin: 20px;
+}
+#container #rule .rule1 .petan img {
   display: block;
-  margin: 30px auto;
-  width: 500px;
-}
-#container #rule .rule-inner .petabeta-left {
-  width: 30%;
-  display: inline-block;
-  vertical-align: top;
-}
-#container #rule .rule-inner .petabeta-left img {
-  width: 60%;
-  margin-top: 35px;
-}
-#container #rule .rule-inner .petabeta-right {
-  width: 70%;
-  display: inline-block;
-}
-#container #rule .rule-inner .table {
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
-  display: block;
-  margin: 50px auto;
 }
-#container #system {
+#system {
   background-color: #FF7031;
   color: #fff;
 }
-#container #system .system-inner {
+#system .system-inner {
   padding: 9% 30px 0;
   margin: 0 auto;
   max-width: 760px;
 }
-#container #system .system-inner h2 {
+#system .system-inner h2 {
   text-align: center;
   font-size: 41px;
   font-weight: bold;
 }
-#container #system .system-inner img {
+#system .system-inner img {
   margin-top: 50px;
   width: 100%;
 }
-#container footer {
-  background-color: #FF7031;
+#future {
+  z-index: 2;
+  background: url("../img/future.png");
+  background-size: cover;
+  background-position: 100%;
+  height: 100%;
+  width: 100%;
+  opacity: 1.0;
+  min-height: 720px;
 }
-#container footer .copyright {
+#future .future-inner {
+  padding: 9% 30px 9%;
+  margin: 0 auto;
+  max-width: 760px;
+}
+#future .future-inner h2 {
+  text-align: center;
+  font-size: 41px;
+  color: #fff;
+}
+#future .future-inner p {
+  text-align: center;
+  color: #fff;
+}
+#future .future-inner .future1 {
+  font-size: 36px;
+  margin-top: 80px;
+}
+#future .future-inner .future2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+#contact {
+  background-color: #37af54;
+  color: #604646;
+}
+#contact .contact-inner {
+  padding: 9% 30px 9%;
+  margin: 0 auto;
+  max-width: 760px;
+  text-align: center;
+}
+#contact .contact-inner h2 {
+  text-align: center;
+  font-size: 41px;
+  font-weight: bold;
+}
+#contact .contact-inner .petapeta1 {
+  font-size: 36px;
+  margin-top: 50px;
+}
+#contact .contact-inner .petapeta2 {
+  font-size: 20px;
+}
+#contact .contact-inner .petapeta3 {
+  font-size: 24px;
+  margin-top: 50px;
+}
+footer {
+  background-color: #37af54;
+}
+footer .copyright {
   color: #fff;
   text-align: center;
   font-size: 12px;
   height: 30px;
   line-height: 30px;
-}
-.green {
-  color: #08c153;
 }
 @media screen and (max-width: 1024px) {
   #container #navWrapper .global-nav {
@@ -475,19 +535,44 @@ body {
     margin-right: 20px;
   }
   #container #home #homeInner .play-button {
-    margin-top: -170px;
+    margin-top: -700px;
   }
-  #container #rule {
+  #container #concept .concept-inner p {
     font-size: 18px;
   }
-  #container #rule h2 {
+  #container #concept .concept-inner h2 {
     font-size: 30px;
   }
-  #container #rule .rule-inner .touch {
+  #container #rule .rule-inner p {
+    font-size: 18px;
+  }
+  #container #rule .rule-inner h2 {
+    font-size: 30px;
+  }
+  #container #rule .rule-inner img {
+    width: 90%;
+    padding: 20px;
+  }
+  #container #rule .rule-inner .rule1 {
+    flex-direction: column;
+  }
+  #container #rule .rule-inner .rule1 .betan {
+    width: 90%;
+  }
+  #container #rule .rule-inner .rule1 .petan {
     width: 90%;
   }
   #container #system .system-inner h2 {
-    font-size: 31px;
+    font-size: 30px;
+  }
+  #container #future .future-inner h2 {
+    font-size: 30px;
+  }
+  #container #future .future-inner .future1 {
+    font-size: 24px;
+  }
+  #container #future .future-inner .future2 {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 540px) {
@@ -544,7 +629,7 @@ body {
     margin-left: -65px;
     height: 30px;
     top: 50%;
-    margin-top: 200px;
+    margin-top: 320px;
     border-width: 2px;
     font-size: 11px;
     line-height: 30px;
@@ -554,6 +639,14 @@ body {
     width: 262px;
     left: 50%;
     margin-left: -131px;
+  }
+  #container #concept {
+    background: url("../img/bg-concept-sp.png");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 50%;
+    min-height: 420px;
   }
   #container #rule {
     padding: 80px 0;
@@ -565,11 +658,6 @@ body {
     height: 30px;
     margin-bottom: 20px;
   }
-  #container #rule h3 {
-    font-size: 18px;
-    margin: 30px 0;
-    padding: 10px 0;
-  }
   #container #rule .rule-inner {
     padding: 0 30px;
   }
@@ -578,6 +666,29 @@ body {
   }
   #container #system .system-inner h2 {
     font-size: 20px;
+  }
+  #container #future {
+    background: url("../img/bg-future-sp.png");
+    background-size: cover;
+    background-position: 100%;
+    min-height: 300px;
+    height: 600px;
+    background-repeat: no-repeat;
+  }
+  #container #future .future-inner h2 {
+    font-size: 30px;
+  }
+  #container #future .future-inner .future1 {
+    font-size: 24px;
+  }
+  #container #future .future-inner .future2 {
+    font-size: 16px;
+  }
+  #container #contact .contact-inner h2 {
+    font-size: 30px;
+  }
+  #container #contact .contact-inner .petapeta3 {
+    font-size: 18px;
   }
   #container footer .copyright {
     font-size: 8px;
